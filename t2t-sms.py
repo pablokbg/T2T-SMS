@@ -47,11 +47,13 @@ def sms_reply():
 
 def send_message(message, chat_id):
     url = f"{TELEGRAM_API_URL}/sendMessage?text={message}&chat_id={chat_id}"
+    
     requests.get(url)
 
 def send_initial_message(chat_id):
     message = "Bot started"
     url = f"{TELEGRAM_API_URL}/sendMessage?text={message}&chat_id={chat_id}"
+    
     requests.get(url)
 
 if __name__ == "__main__":

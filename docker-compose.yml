@@ -1,9 +1,12 @@
 version: "3"
 
 services:
-  t2t-sms:
+  app:
     container_name: t2t-sms
     restart: unless-stopped
     build: .
+    environment:
+      - TELEGRAM_BOT_TOKEN = 123456789:AAAAAAAAAAAAAAAAAAAAAA
+      - TELEGRAM_CHAT_ID = 000000000
     ports:
       - 8624:8080

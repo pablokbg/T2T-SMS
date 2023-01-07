@@ -18,11 +18,9 @@ def handle_get():
 
 @webhook.route("/sms", methods=["POST"])
 def sms_reply():
-    # Get the message and the phone number of the sender
     message = request.form["Body"]
     sender = request.form["From"]
-
-    # Send the message through your Telegram bot
+    
     send_message(f"From: {sender}\n{message}", TELEGRAM_CHAT_ID)
     
     return webhook.send_static_file('index.html')

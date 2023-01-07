@@ -1,1 +1,3 @@
-# T2T SMS (Twilio to Telegram SMS)
+# T2T SMS 
+Forward SMS from your Twilio number to Telegram
+

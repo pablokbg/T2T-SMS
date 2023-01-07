@@ -38,4 +38,4 @@ def send_initial_message(chat_id):
 
 if __name__ == "__main__":
     send_initial_message(TELEGRAM_CHAT_ID)
-    serve(webhook, host='0.0.0.0', port=8624)
+    serve(webhook, host='0.0.0.0', port=80)

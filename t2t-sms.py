@@ -3,9 +3,12 @@ try:
     import requests
     from flask import Flask, request
     from waitress import serve
-    from config import TELEGRAM_API_URL, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
 except ImportError as err:
     print(f"Failed to import the required modules: {err}")
+
+TELEGRAM_API_URL = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}"
+TELEGRAM_BOT_TOKEN = "123456789:AAAAAAAAAAAAAAAAAAAAAA"
+TELEGRAM_CHAT_ID = 000000000
 
 webhook = Flask(__name__)
 

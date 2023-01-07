@@ -3,10 +3,11 @@ version: "3"
 services:
   app:
     container_name: t2t-sms
-    restart: unless-stopped
+    restart: always
     build: .
     environment:
       - TELEGRAM_BOT_TOKEN=123456789:AAAAAAAAAAAAAAAAAAAAAA
       - TELEGRAM_CHAT_ID=000000000
+      - TWILIO_AUTH_TOKEN=abcdefghi123456789
     ports:
       - 8624:8080

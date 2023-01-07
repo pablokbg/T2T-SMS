@@ -4,5 +4,5 @@ services:
   python:
     build: .
     ports:
-      - 8624:8080
+      - 8624:80
     env_file: .env

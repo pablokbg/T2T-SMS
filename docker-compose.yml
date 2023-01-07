@@ -2,7 +2,6 @@ version: "3"
 
 services:
   t2t-sms:
-    container_name: t2t-sms
     restart: unless-stopped
     build: .
     ports:

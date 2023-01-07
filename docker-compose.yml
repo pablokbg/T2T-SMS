@@ -1,7 +1,9 @@
 version: "3"
 
 services:
-  python:
+  t2t-sms:
+    container_name: t2t-sms
+    restart: unless-stopped
     build: .
     ports:
       - 8624:8080

@@ -6,9 +6,10 @@ try:
 except ImportError as err:
     print(f"Failed to import the required modules: {err}")
 
+TELEGRAM_BOT_TOKEN = os.environ['TELEGRAM_BOT_TOKEN']
+TELEGRAM_CHAT_ID = os.environ['TELEGRAM_CHAT_ID']
 TELEGRAM_API_URL = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}"
-TELEGRAM_BOT_TOKEN = "123456789:AAAAAAAAAAAAAAAAAAAAAA"
-TELEGRAM_CHAT_ID = 000000000
+
 
 webhook = Flask(__name__)
 
